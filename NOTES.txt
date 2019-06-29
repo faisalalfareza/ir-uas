@@ -1,0 +1,46 @@
+INGRIDIENTS
+------------------------------
+https://scikit-learn.org/stable/install.html
+
+
+TF IDF EXAMPLE in SCIKIT LEARN
+------------------------------
+1. https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html
+2. https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfTransformer.html
+3. https://scikit-learn.org/stable/modules/feature_extraction.html
+4. http://kavita-ganesan.com/extracting-keywords-from-text-tfidf/#.XRbPIegzads
+
+
+QUESTIONS (?)
+------------------------------
+Bahasa pada dataset, mempengaruhi ?
+Kata kunci (kata tujuan) pada artikel apakah boleh muncul/tidak ?
+
+
+PAK GO EXAMPLE in SCIKIT LEARN
+------------------------------
+import numpy as np
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+list_artikel = [
+     'This is the first document.',
+     'This document is the second document.',
+     'And this is the third one.',
+     'Is this the first document?',
+]
+
+vectorizer = TfidfVectorizer()
+vektor = vectorizer.fit_transform(list_artikel)
+
+print(list_artikel)
+print(vectorizer.get_feature_names())
+
+print(vektor)
+# print(vektor.shape)
+print(vektor.toArray())
+
+for indexArtikel, v in enumerate(list_artikel):
+     print ("Artikel ke: ", indexArtikel, list_artikel[indexArtikel])
+     for indexKata, kata in enumerate(vectorizer.get_feature_names()):
+         print(indexKata, kata, vektor.toArray()[indexArtikel][indexKata])
+     print()
