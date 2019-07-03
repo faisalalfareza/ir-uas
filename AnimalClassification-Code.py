@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[101]:
+# In[3]:
 
 
 # OVERVIEW
@@ -12,6 +12,7 @@
 
 # IMPORT LIBRARY OR PLUGIN
 import pandas as pd
+import numpy as np
 
 from scipy.sparse import find
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -91,10 +92,10 @@ gnb = GaussianNB()
 gnb.fit(vektor_dataset_to_array, list_anim_name)
     
 # SENTENCES INPUT
-sentence = ["tinggi sekitar 1,6m"]
-print("SENTENCE INPUT :\n", sentence[0], "\n")
+sentence = "tinggi sekitar 1,6m"
+print("SENTENCE INPUT :\n", sentence, "\n")
 
-vektor_sentence = vectorizer.fit_transform(sentence)
+vektor_sentence = vectorizer.fit_transform([sentence])
 unique_tokens_sentence = vectorizer.get_feature_names();
 print("SENTENCE UNIQUE WORDS :\n", unique_tokens_sentence, "\n")
 
