@@ -1,7 +1,17 @@
 INGRIDIENTS
 ------------------------------
 https://scikit-learn.org/stable/install.html
+Python (>= 3.5)
+NumPy (>= 1.11.0)
+SciPy (>= 0.17.0)
+joblib (>= 0.11)
 
+https://www.anaconda.com/distribution/#download-section
+- "conda update scikit-learn"
+  Canopy and Anaconda both ship a recent version of scikit-learn, 
+  in addition to a large set of scientific python library for Windows, Mac OSX and Linux.
+
+Anaconda offers scikit-learn as part of its free distribution.
 
 TF IDF EXAMPLE in SCIKIT LEARN
 ------------------------------
@@ -16,6 +26,7 @@ QUESTIONS (?)
 Bahasa pada dataset, mempengaruhi ?
 Kata kunci (kata tujuan) pada artikel apakah boleh muncul/tidak ?
 
+pd.read_csv('DatasetHewan-Faisal.csv', delimiter = ',')
 
 PAK GO EXAMPLE in SCIKIT LEARN
 ------------------------------
